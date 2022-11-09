@@ -1,6 +1,6 @@
 package com.Neotech.Review05;
 
-public class Task {
+public class TaskReplaceChar {
 	public static void main(String[] args) {
 
 		// Print the whole array, but replace 'a' with 'e'

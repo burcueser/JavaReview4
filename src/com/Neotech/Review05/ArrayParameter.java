@@ -23,8 +23,46 @@ public class ArrayParameter {
 		int result = ap.largestNumber(array); // call the method from below
 		System.out.println("The largest number in the array is --> " + result);
 
-	} // we closed the parenthesis for public static void main(String[] args) and open
-		// new public
+		// Task 2
+		result = ap.arraySum(array);
+		System.out.println("The sum of the array is --> " + result);
+
+		// Task 3
+
+		double d = ap.arrayAvg(array);
+		System.out.println("The average of the array is --> " + d);
+
+	}
+	// we closed the parenthesis for public static void main(String[] args) and open
+	// new public method
+
+	// Task 2:
+	// Create a method that will get an array of integers
+	// and return the sum. make the method protected
+
+	protected int arraySum(int[] arr) {
+		int sum = 0;
+
+		for (int el : arr) {
+			sum += el;
+		}
+		return sum;
+	}
+
+	// Task3:
+	// Create method that will get an array of integers
+	// and return the average as a double. Make the method private
+
+	private double arrayAvg(int[] arr) {
+		// you can call a method from another method
+		// instead of recalculating sum you can call it from the sum method we already
+		// typed
+
+		double sum = arraySum(arr);
+		double average = sum / arr.length;
+
+		return average;
+	}
 
 	public int largestNumber(int[] arr) { // give me an array as a parameter
 		int largest = arr[0];
